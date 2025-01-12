@@ -11,6 +11,7 @@ function HomePage() {
           autoPlay
           loop
           muted
+          playsInline
         />
         <div className="hero-content">
           <h1>Welcome to Penang</h1>
