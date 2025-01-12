@@ -1,11 +1,12 @@
+/* Base styles for larger screens (desktop/tablet) */
 .hero-section {
   position: relative;
   height: 400px;
   color: white;
   text-align: center;
   padding: 100px 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for the hero section */
-  overflow: hidden; /* Ensures the video doesn't overflow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .hero-section video {
@@ -15,14 +16,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; /* Sends the video behind the content */
+  z-index: -1;
 }
 
 .hero-section h1,
 .hero-section p,
 .hero-section button {
   position: relative;
-  z-index: 1; /* Ensures content appears above the video */
+  z-index: 1;
 }
 
 .hero-section h1 {
@@ -94,4 +95,91 @@
 
 .category-card a:hover {
   background-color: #0056b3;
+}
+
+/* Mobile-friendly styles */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 50px 20px;
+    height: 300px;
+  }
+
+  .hero-section h1 {
+    font-size: 36px;
+  }
+
+  .hero-section p {
+    font-size: 16px;
+  }
+
+  .hero-section button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .category-cards {
+    justify-content: center;
+  }
+
+  .category-card {
+    width: 80%; /* Makes cards wider on mobile */
+    margin: 15px 0;
+  }
+
+  .category-card h2 {
+    font-size: 20px;
+  }
+
+  .category-card p {
+    font-size: 14px;
+  }
+
+  .category-card a {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Extra small screens (phones in portrait mode) */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 30px 10px;
+    height: 250px;
+  }
+
+  .hero-section h1 {
+    font-size: 28px;
+  }
+
+  .hero-section p {
+    font-size: 14px;
+  }
+
+  .hero-section button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .category-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category-card {
+    width: 90%; /* Even wider cards for small screens */
+    margin: 10px 0;
+  }
+
+  .category-card h2 {
+    font-size: 18px;
+  }
+
+  .category-card p {
+    font-size: 12px;
+  }
+
+  .category-card a {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
 }
